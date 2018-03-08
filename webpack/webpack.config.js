@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const development = require('./development.config');
 const production = require('./production.config');
@@ -64,7 +65,13 @@ const common = {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '../src/public') + '/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'node_modules/monaco-editor/min/vs',
+        to: 'vs',
+      }
+    ])
   ]
 };
 
