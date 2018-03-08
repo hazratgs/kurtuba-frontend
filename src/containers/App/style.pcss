@@ -1,15 +1,18 @@
 @import "../../public/css/variables.pcss";
 
-body {
+html, body {
   font-family: var(--text);
+  overflow-y: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .app {
-  width: 820px;
-  margin: 40px auto;
-  font-family: var(--text);
-}
+  display: flex;
+  height: 100%;
 
-.content {
-  width: 100%;
+  .content {
+    flex: 1;
+  }
 }

@@ -1,19 +1,20 @@
 import React, { PureComponent } from 'react'
 import { withRouter } from 'react-router-dom'
-import onlineStorage from 'kurtuba-client'
+import CSSModules from 'react-css-modules'
 import s from './style.pcss'
 
-import Header from '../../components/Header'
-
-console.log(onlineStorage.create())
+import Menu from '../Menu'
+import Editor from '../Editor'
 
 @withRouter
+@CSSModules(s)
 export default class App extends PureComponent {
   render () {
     return (
-      <div className={s.app} onClick={this.handle}>
-        <div className={s.content}>
-          <Header/>
+      <div styleName='app'>
+        <Menu/>
+        <div styleName='content'>
+          <Editor/>
         </div>
       </div>
     )
