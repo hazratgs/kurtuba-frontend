@@ -23,6 +23,7 @@
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
+    "copy-webpack-plugin": "^4.5.0",
     "css-loader": "0.28.9",
     "csso": "3.5.0",
     "eslint": "4.15.0",
@@ -60,15 +61,16 @@
     "webpack-merge": "4.1.1"
   },
   "dependencies": {
-    "whatwg-fetch": "2.0.3",
-    "react": "16.2.0",
     "babel-polyfill": "6.26.0",
-    "react-router-dom": "4.2.2",
-    "prop-types": "15.6.0",
-    "react-redux": "5.0.6",
-    "redux": "3.7.2",
+    "kurtuba-client": "^1.0.4",
     "normalize.css": "7.0.0",
+    "prop-types": "15.6.0",
+    "react": "16.2.0",
     "react-dom": "16.2.0",
-    "kurtuba-client": "^1.0.4"
+    "react-monaco-editor": "^0.13.0",
+    "react-redux": "5.0.6",
+    "react-router-dom": "4.2.2",
+    "redux": "3.7.2",
+    "whatwg-fetch": "2.0.3"
   }
 }
