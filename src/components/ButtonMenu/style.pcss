@@ -1,0 +1,77 @@
+@import "../../public/css/variables.pcss";
+
+.button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto 10px;
+  outline: none;
+  width: var(--size-menu-button);
+  height: var(--size-menu-button);
+  border-radius: 100%;
+  position: relative;
+  @apply --transition;
+
+  &:hover {
+    background: var(--background-menu-hover);
+
+    .title {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &:active {
+    background: var(--background-menu-active);
+  }
+
+  &.bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &[disabled] {
+    opacity: 0.4;
+    cursor: default;
+
+    &.hover {
+      background: transparent;
+    }
+  }
+
+  svg {
+    fill: #41526d;
+    width: var(--size-icon);
+    height: var(--size-icon);
+  }
+}
+
+.title {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #091E42;
+  border-radius: 3px;
+  height: 16px;
+  font-size: 12px;
+  padding: 2px 8px;
+  pointer-events: none;
+  line-height: 1.3333333333333333;
+  width: auto;
+  white-space: nowrap;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all 0.4s ease;
+
+  span {
+    color: #fff;
+  }
+}
