@@ -5,6 +5,7 @@ import s from './style.pcss'
 
 import Menu from '../Menu'
 import Editor from '../Editor'
+import Popup from '../Popup'
 
 @withRouter
 @CSSModules(s)
@@ -12,9 +13,12 @@ export default class App extends PureComponent {
   render () {
     return (
       <div styleName='app'>
-        <Menu/>
-        <div styleName='content'>
-          <Editor/>
+        <Popup/>
+        <div styleName='wrapper'>
+          <Menu/>
+          <div styleName='content'>
+            <Editor/>
+          </div>
         </div>
       </div>
     )
