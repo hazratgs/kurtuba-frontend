@@ -1,0 +1,56 @@
+@import "../../public/css/variables.pcss";
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--overlay);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .wrapper {
+      transform: translateX(0);
+    }
+  }
+
+  .wrapper {
+    width: 360px;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    transition: transform 0.3s cubic-bezier(0, 0.61, 0.29, 0.96);
+    transform: translateX(-100%);
+    will-change: transform;
+
+    .menu {
+      width: 64px;
+      min-width: 64px;
+      background-color: #fff;
+      padding: var(--padding-menu) 0;
+      position: relative;
+      z-index: 5;
+
+      .logo {
+        background-color: var(--background-menu-hover);
+        width: var(--size-menu-button);
+        height: var(--size-menu-button);
+        display: block;
+        left: 0;
+        right: 0;
+        margin: 0 auto 20px;
+      }
+    }
+
+    .content {
+      flex: 1;
+    }
+  }
+}
