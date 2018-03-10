@@ -1,0 +1,62 @@
+@import "../../public/css/variables.pcss";
+
+.checkbox {
+  margin-bottom: 14px;
+  position: relative;
+  user-select: none;
+
+  input {
+    display: none;
+
+    &:checked + span {
+      color: #000;
+
+      &:after {
+        display: block;
+      }
+
+      &:before {
+        border-color: var(--background-button);
+      }
+    }
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+    padding: 5px 0 5px 28px;
+    font-family: var(--text);
+    cursor: pointer;
+    position: relative;
+    color: #5E6C84;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 5px;
+      margin: auto;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      box-sizing: border-box;
+      background-color: var(--background-button);
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #eee;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+  }
+}
